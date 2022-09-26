@@ -5,6 +5,7 @@ Document management system, see: https://www.openkm.com/.
 Usage:
 ------
 
+* create keystore: keytool -genkey -alias tomcat -keyalg RSA
 * docker-compose up
 
 For production replace mysql password and root password in files

@@ -4,10 +4,11 @@ services:
   openkm:
     image: openkm/openkm-ce:6.3.12
     ports:
-      - 8080:8080
+      - "8443:8443"
     volumes:
       - ${PWD}/server.xml:/opt/tomcat/conf/server.xml
       - ${PWD}/OpenKM.cfg:/opt/tomcat/OpenKM.cfg
+      - ${PWD}/.keystore:/opt/tomcat/.keystore
       - ${PWD}/repository:/opt/tomcat/repository
     links:
       - mysql:mysql

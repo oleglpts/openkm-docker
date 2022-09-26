@@ -35,7 +35,10 @@
        Documentation at /docs/config/service.html
    -->
   <Service name="Catalina">
-    <Connector port="8080" address="0.0.0.0" protocol="HTTP/1.1" connectionTimeout="20000" redirectPort="8443" />
+    <Connector port="8443" protocol="HTTP/1.1" SSLEnabled="true"
+           maxThreads="150" scheme="https" secure="true"
+           clientAuth="false" sslProtocol="TLS"
+           keystoreFile="${catalina.home}/.keystore" keystorePass="changeit" keyAlias="tomcat" />
 
     <!-- Define an AJP 1.3 Connector on port 8009 -->
     <Connector port="8009" address="127.0.0.1" protocol="AJP/1.3" redirectPort="8443" />
