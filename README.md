@@ -5,7 +5,7 @@ Document management system, see: https://www.openkm.com/.
 Usage:
 ------
 
-* docker-compose up
+* docker-compose up (user: okmAdmin, password: admin)
 
 For production replace mysql password and root password in files
 * docker-compose.yml
